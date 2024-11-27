@@ -11,7 +11,7 @@ client = AzureOpenAI(
 
 def load_api_key():
     with open("spoonacularAPI_Key.txt", 'r') as file:
-        return file.read().strip()
+        return file.read()
 
 def get_recipe(ingredients):
     api_key = load_api_key()
@@ -58,7 +58,7 @@ functions = [
                         "nullable": True
                     }
                 },
-                "required": [],  # Both parameters are optional, at least one should be provided
+                "required": [], 
             }
         }
     }
